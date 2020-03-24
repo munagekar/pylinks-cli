@@ -13,11 +13,13 @@ pytest-cov = "*"
 bump2version = "*"
 mypy = "*"
 pipenv-to-requirements = "*"
+certifi = "*"
 
 [packages]
 toml = "*"
 typer = "*"
 pyli = {editable = true,path = "."}
+requests = "*"
 
 [requires]
 python_version = "3.8"
