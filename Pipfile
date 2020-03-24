@@ -4,6 +4,14 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+black = "==19.10b0"
+isort = {extras = ["pipfile", "requirements"],version = "*"}
+flake8 = "*"
+pytest = "*"
+pytest-testmon = "*"
+pytest-cov = "*"
+bump2version = "*"
+mypy = "*"
 
 [packages]
 
