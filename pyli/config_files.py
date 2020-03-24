@@ -15,3 +15,8 @@ if not CONF_FILE.exists():
     CONF_FILE.open("w")
     CONF_FILE.write_text(toml.dumps({}))
     logger.info("Initialized Empty pylinks config file")
+
+TOKEN_DIR = CONFIG_DIR / "tokens"
+
+if not TOKEN_DIR.exists():
+    TOKEN_DIR.mkdir(parents=True, exist_ok=True)

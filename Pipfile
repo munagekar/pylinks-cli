@@ -20,6 +20,9 @@ toml = "*"
 typer = "*"
 pyli = {editable = true,path = "."}
 requests = "*"
+pyjwt = "*"
+jwt = "*"
+pydantic = "*"
 
 [requires]
 python_version = "3.8"
