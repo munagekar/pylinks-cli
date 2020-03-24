@@ -17,3 +17,6 @@ test:
 
 coverage:
 	pipenv run python -m pytest --cov=pyli tests --cov-report term-missing
+
+requirements:
+	pipenv run pipenv_to_requirements -q

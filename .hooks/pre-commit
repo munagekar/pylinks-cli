@@ -49,17 +49,8 @@ else
   echo "${GREEN}Success MyPy${NC}"
 fi
 
-# Sync Requirements
-pipenv run pipenv_to_requirements -q
-reqd_not_okay=$?
-if [[ "$reqd_not_okay" -gt 0 ]]
-then
-  echo "${RED}Reqd Sync Failed ${NC} : Required status check"
-else
-  echo "${GREEN}Reqd Syncec${NC}"
-fi
 
-finalstatus=$((black_not_okay|isort_not_okay|flake_not_okay|mypy_not_okay|reqd_not_okay))
+finalstatus=$((black_not_okay|isort_not_okay|flake_not_okay|mypy_not_okay))
 if [[ "$finalstatus" -gt 0 ]]
 then
   echo "${RED}Failed to Commit${NC}"
