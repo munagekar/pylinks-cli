@@ -12,8 +12,11 @@ pytest-testmon = "*"
 pytest-cov = "*"
 bump2version = "*"
 mypy = "*"
+pipenv-to-requirements = "*"
 
 [packages]
+toml = "*"
+typer = "*"
 
 
 [requires]
