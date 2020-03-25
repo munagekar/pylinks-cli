@@ -56,7 +56,6 @@ def get_current_server_config() -> Dict[str, str]:
     return get_server_config(get_current_server())
 
 
-@app.command()
 def add(server_name: str, addr: str = Option(..., "-a")):
     """
     Adds the Server to Pylinks-Cli
@@ -81,7 +80,9 @@ def add(server_name: str, addr: str = Option(..., "-a")):
 
 @app.command()
 def signup(
-    user: str = Option(..., "-u"),
+    server_name: str = Option("default", prompt=True),
+    server_address: str = Option(..., prompt=True),
+    user: str = Option(..., "-u", prompt=True),
     password: str = Option(..., "-p", prompt=True, confirmation_prompt=True, hide_input=True),
 ):
     """
@@ -91,6 +92,7 @@ def signup(
         user : Username
         password: Password
     """
+    add(server_name, server_address)
     server_config = get_current_server_config()
     server_address = server_config[SERVER_ADDR]
     server_config[SERVER_USER] = user
@@ -148,7 +150,6 @@ def read_token():
 
 def token_is_expired(token: str) -> bool:
     _, _, token_core = token.partition(" ")
-    print(token_core)
     decoded = jwt.decode(token_core.encode(), verify=False)
     exp = decoded["exp"]
     if exp - 5 < time.time():

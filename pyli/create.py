@@ -10,7 +10,7 @@ app = typer.Typer()
 
 
 @app.command()
-def create(url: str = Option(..., prompt=True), text: str = Option(..., prompt=True)):
+def link(url: str = Option(..., prompt=True), text: str = Option(..., prompt=True)):
     server_config = get_current_server_config()
     auth_header = get_token()
     print(auth_header)
