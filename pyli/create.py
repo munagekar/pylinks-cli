@@ -20,10 +20,17 @@ def complete_roles(incomplete: str):
 
 
 @app.command()
-def link(url: str = Option(..., prompt=True), text: str = Option(..., prompt=True)):
+def link(
+    url: str = Option(..., prompt=True), text: str = Option(..., prompt=True), team: str = Option("", prompt=True)
+):
     server_config = get_current_server_config()
     auth_header = get_token()
-    data = f'{{"text":"{text}","link":"{url}"}}'
+
+    if team:
+        data = f'{{"text":"{text}","link":"{url}","team":"{team}"}}'
+    else:
+        data = f'{{"text":"{text}","link":"{url}"}}'
+
     endpoint = urllib.parse.urljoin(server_config[SERVER_ADDR], "/link/")
     headers = {"Authorization": auth_header}
     resp = requests.post(endpoint, data=data, headers=headers)
