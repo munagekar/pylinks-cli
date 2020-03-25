@@ -24,7 +24,7 @@ def link(url: str = Option(..., prompt=True), text: str = Option(..., prompt=Tru
     server_config = get_current_server_config()
     auth_header = get_token()
     data = f'{{"text":"{text}","link":"{url}"}}'
-    endpoint = urllib.parse.urljoin(server_config[SERVER_ADDR], "/ulink/")
+    endpoint = urllib.parse.urljoin(server_config[SERVER_ADDR], "/link/")
     headers = {"Authorization": auth_header}
     resp = requests.post(endpoint, data=data, headers=headers)
     print(resp.status_code)
