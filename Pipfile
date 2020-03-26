@@ -23,6 +23,7 @@ requests = "*"
 pyjwt = "*"
 jwt = "*"
 pydantic = "*"
+pyinquirer = "*"
 
 [requires]
 python_version = "3.8"

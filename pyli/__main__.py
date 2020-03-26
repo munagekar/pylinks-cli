@@ -8,6 +8,7 @@ import pyli.conf as conf
 import pyli.create as create
 import pyli.list as list
 import pyli.server as server
+import pyli.update as update
 from pyli.server import SERVER_ADDR, get_current_server_config, get_token
 
 app = typer.Typer()
@@ -15,6 +16,7 @@ app.add_typer(create.app, name="create")
 app.add_typer(server.app, name="server")
 app.add_typer(conf.app, name="conf")
 app.add_typer(list.app, name="list")
+app.add_typer(update.app, name="update")
 
 
 @app.command()
