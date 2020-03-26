@@ -14,5 +14,6 @@ pydantic
 pyinquirer
 pyjwt
 requests
+shellingham
 toml
 typer

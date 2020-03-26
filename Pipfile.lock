@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "0ab3b8b5c4087f51d68b22164e6c33689692c8fc00f9d3ceec62ebb3f0ce5eeb"
+            "sha256": "8b38923702fe0e21efee238c2e49ea6305be71d39a5b90f9faad0f16bb12159c"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -204,6 +204,14 @@
             ],
             "index": "pypi",
             "version": "==2.23.0"
+        },
+        "shellingham": {
+            "hashes": [
+                "sha256:576c1982bea0ba82fb46c36feb951319d7f42214a82634233f58b40d858a751e",
+                "sha256:7f6206ae169dc1a03af8a138681b3f962ae61cc93ade84d0585cca3aaf770044"
+            ],
+            "index": "pypi",
+            "version": "==1.3.2"
         },
         "six": {
             "hashes": [

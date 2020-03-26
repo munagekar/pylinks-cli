@@ -24,6 +24,7 @@ pyjwt = "*"
 jwt = "*"
 pydantic = "*"
 pyinquirer = "*"
+shellingham = "*"
 
 [requires]
 python_version = "3.8"
