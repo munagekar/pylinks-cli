@@ -10,8 +10,6 @@
 # `Pipfile.lock` and then regenerate `requirements*.txt`.
 ################################################################################
 
--e .
-jwt
 pydantic
 pyinquirer
 pyjwt

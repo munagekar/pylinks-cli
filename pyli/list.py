@@ -1,5 +1,6 @@
 import json
 import urllib
+from typing import Dict, List
 
 import requests
 import typer
@@ -10,7 +11,7 @@ app = typer.Typer()
 
 
 @app.command()
-def teams(silent: bool = False):
+def teams(silent: bool = False) -> List[Dict[str, str]]:
     server_config = get_current_server_config()
     auth_header = get_token()
     headers = {"Authorization": auth_header}

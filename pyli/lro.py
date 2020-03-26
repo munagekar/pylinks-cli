@@ -55,6 +55,3 @@ def user_set_lro(teams: List[str]):
     window.after(1, lambda: window.focus_force())
     window.mainloop()
     return ret_list
-
-
-print(user_set_lro(["one", "two", "three", "four"]))
